@@ -1,3 +1,5 @@
 from caesar import *
 
-print(encrypt("Hello World!", 5))
+word = encrypt("Hello World!", 5)
+print(word)
+print(decrypt(word, 5))

@@ -3,8 +3,24 @@ def encrypt(text, shift):
 
     for index in range(len(text)):
         character = text[index]
-        if (character.isalpha()):
-            encryptedText += (chr(ord(character) + (shift % 26)))
+        if (character.isupper()):
+            encryptedText += chr(((ord(character) - 65 + shift) % 26) + 65)
+        elif (character.islower()):
+            encryptedText += chr(((ord(character) - 97 + shift) % 26) + 97)
+        else:
+            encryptedText += character
+
+    return encryptedText
+
+def decrypt(text, shift):
+    encryptedText = ""
+
+    for index in range(len(text)):
+        character = text[index]
+        if (character.isupper()):
+            encryptedText += chr(((ord(character) - 65 - shift) % 26) + 65)
+        elif (character.islower()):
+            encryptedText += chr(((ord(character) - 97 - shift) % 26) + 97)
         else:
             encryptedText += character
 
