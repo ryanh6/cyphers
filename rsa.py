@@ -1,5 +1,5 @@
-def encrypt():
+def rsaEncrypt():
     print("hi")
 
-def decrypt():
+def rsaDecrypt():
     print("bye")

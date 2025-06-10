@@ -1,4 +1,4 @@
-def encrypt(text, shift):
+def caesarEncrypt(text, shift):
     encryptedText = ""
 
     for index in range(len(text)):
@@ -12,7 +12,7 @@ def encrypt(text, shift):
 
     return encryptedText
 
-def decrypt(text, shift):
+def caesarDecrypt(text, shift):
     encryptedText = ""
 
     for index in range(len(text)):
